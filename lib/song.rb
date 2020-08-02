@@ -2,8 +2,8 @@ require_relative '../lib/concerns/memorable'
 require 'pry'
 
 class Song
-  extend Memorable
-  include Paramable
+  extend Memorable::ClassMethods
+  include Memorable::InstanceMethods, Paramable
   attr_accessor :name
   attr_reader :artist
 
