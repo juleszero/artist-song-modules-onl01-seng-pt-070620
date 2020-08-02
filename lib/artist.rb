@@ -3,7 +3,7 @@ require 'pry'
 class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods, Paramable
-  #include Paramable
+  
   attr_accessor :name
   attr_reader :songs
 
