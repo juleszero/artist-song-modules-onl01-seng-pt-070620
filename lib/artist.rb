@@ -2,15 +2,15 @@ require 'pry'
 
 class Artist
   extend Memorable::ClassMethods
-  include Memorable::InstanceMethods
-  include Paramable
+  include Memorable::InstanceMethods, Paramable
+  #include Paramable
   attr_accessor :name
   attr_reader :songs
 
   @@artists = []
 
   def initialize
-    self.class.all << self
+    super
     @songs = []
   end
 
